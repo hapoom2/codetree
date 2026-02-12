@@ -8,8 +8,7 @@ public class Main {
         int d2 = sc.nextInt();
         
         int[] month = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        String[] week = { "Tue", "Wed", "Thu", "Fri", "Sat","Sun","Mon"};
-        String[] Rweek = {"Mon","Sun","Sat","Fri","Thu","Wed","Tue"};
+        String[] week = { "Mon","Tue", "Wed", "Thu", "Fri", "Sat","Sun"};
         int days = 0;
         String ans;
         if(m1<m2||(m1==m2&&d1<d2)) {
@@ -18,7 +17,6 @@ public class Main {
 	        }
 	
 	        days = days + d2 - d1;
-	        ans = week[days%7];
         }
         else {
         	for(int i=m2;i<m1;i++){
@@ -26,11 +24,12 @@ public class Main {
 	        }
 	
 	        days = days + d1 - d2;
-	        ans = Rweek[days%7];
+	        days = -days;
         }
-        
+        int idx = ((days%7)+7)%7;
 
-        System.out.println(ans);
+        System.out.println(week[idx]);
 	}
+
 
 }
