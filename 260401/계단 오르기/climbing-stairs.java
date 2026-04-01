@@ -5,6 +5,7 @@ public class Main {
         int n = sc.nextInt();
         // Please write your code here.
         int dp[] = new int[n+1];
+        dp[0] = 1;
         dp[1] = 0;
         dp[2] = 1;
         for(int i=3;i<=n;i++){
