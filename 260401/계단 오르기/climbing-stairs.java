@@ -15,6 +15,6 @@ public class Main {
                 dp[i] = (dp[i-2]==0?0:dp[i-2])+(dp[i-3]==0?0:dp[i-3]);
             }
         }
-        System.out.println(dp[n]);
+        System.out.println(dp[n]%10007);
     }
 }
